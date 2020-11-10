@@ -49,6 +49,15 @@ def square():
         sendmsg('ccw 90')  # Turn CounterClockwise 90 Degrees
 
 
+def loop():
+    sendmsg('up 50')
+    sendmsg('forward 100')
+    sendmsg('up 50')
+    sendmsg('back 100')
+    sendmsg('down 50')
+    sendmsg('forward 100')
+
+
 print("\nJacob Avery")
 print("Program Name: Tello Drone Training School")
 print("Date: 11.8.2020")
@@ -65,8 +74,11 @@ try:
         sendmsg('takeoff')
 
         # Call the Square Function
-        square()
-        
+        # square()
+
+        # Call Loop Function
+        loop()
+
         sendmsg('land')
 
         print('\nGreat Flight!!!')
