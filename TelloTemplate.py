@@ -49,6 +49,24 @@ def square():
         sendmsg('ccw 90')  # Turn CounterClockwise 90 Degrees
 
 
+# Drone through first hoop
+def firstHoop():
+    # sendmsg('up 65')
+    sendmsg('forward 190')
+
+
+# Drone through second hoop
+def secondHoop():
+    sendmsg('go 300 0 100 75')
+
+
+# Drone through third hoop
+# def thirdHoopYaw():
+
+# Drone through fourth hoop
+# def fourthHoop():
+
+
 def loop():
     sendmsg('up 50')
     sendmsg('forward 100')
