@@ -6,7 +6,7 @@ import threading, socket, sys, time, subprocess
 
 # GLOBAL VARIABLES DECLARED HERE....
 host = ''
-port = 9000
+port = 8999
 locaddr = (host, port)
 tello_address = ('192.168.10.1', 8889)  # Get the Tello drone's address
 
@@ -43,13 +43,13 @@ recvThread.start()
 
 # Drone through first hoop
 def firstHoop():
-    sendmsg('up 65')
+    sendmsg('up 50')
     sendmsg('forward 190')
 
 
 # Drone through second hoop
-# def secondHoop():
-    # sendmsg('go 300 0 100 75')
+def secondHoop():
+    sendmsg('go 300 0 100 75')
 
 
 # Drone through third hoop
