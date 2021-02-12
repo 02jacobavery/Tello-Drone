@@ -49,7 +49,7 @@ def firstHoop():
 
 # Drone through second hoop
 def secondHoop():
-    sendmsg('go 300 0 100 75')
+    sendmsg('go 200 0 25 75')
 
 
 # Drone through third hoop
