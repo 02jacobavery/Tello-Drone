@@ -44,19 +44,23 @@ recvThread.start()
 # Drone through first hoop
 def firstHoop():
     sendmsg('up 50')
-    sendmsg('forward 190')
+    sendmsg('forward 200')
 
 
 # Drone through second hoop
 def secondHoop():
-    sendmsg('go 200 0 25 75')
+    sendmsg('go 200 0 40 75')
 
 
 # Drone through third hoop
-# def thirdHoopYaw():
+def thirdHoopYaw():
+    sendmsg('curve 100 100 0 30 250 0 60')
+    time.sleep(3)
+    sendmsg('ccw 180')
 
 # Drone through fourth hoop
-# def fourthHoop():
+def fourthHoop():
+    sendmsg('go -250 0 -60 75')
 
 
 print("\nJacob Avery")
@@ -76,7 +80,11 @@ try:
 
         firstHoop()
 
-        # secondHoop()
+        secondHoop()
+
+        thirdHoopYaw()
+
+        fourthHoop()
 
         sendmsg('land')
 
